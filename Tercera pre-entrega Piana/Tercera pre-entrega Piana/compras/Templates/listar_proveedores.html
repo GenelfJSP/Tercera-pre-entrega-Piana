@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Proveedores{% endblock %}
+
+{% block header_title %}Lista de Proveedores{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for proveedor in proveedores %}
+            <li>{{ proveedor.nombre_proveedor }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

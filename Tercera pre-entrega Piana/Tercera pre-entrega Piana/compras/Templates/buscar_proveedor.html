@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Buscar Proveedor{% endblock %}
+
+{% block content %}
+    <h2>Buscar Proveedor</h2>
+    <ul>
+        {% for proveedor in proveedores %}
+            <li>{{ proveedor.nombre_proveedor }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Usuarios - Sistema de Compras{% endblock %}
+
+{% block header_title %}Usuarios Registrados{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario.username }}</li> 
+        {% empty %}
+            <li>No hay usuarios registrados.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

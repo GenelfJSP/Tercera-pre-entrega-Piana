@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Productos - Sistema de Compras{% endblock %}
+
+{% block header_title %}Lista de Productos{% endblock %}
+
+{% block content %}
+<ul>
+    {% for cliente in clientes %}
+    <li>{{ cliente.nombre_usuario }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
