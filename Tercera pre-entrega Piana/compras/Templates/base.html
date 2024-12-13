@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema de Compras{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block header_title %}Bienvenido al Sistema de Compras{% endblock %}</h1>
+        <nav>
+            <ul>
+                {% if request.path != '/' %}
+                    <li><a href="/">Inicio</a></li>
+                {% endif %}
+                {% if request.path != '/usuarios/' %}
+                    <li><a href="/usuarios/">Usuarios</a></li>
+                {% endif %}
+                {% if request.path != '/productos/' %}
+                    <li><a href="/productos/">Productos</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Este bloque se llenará con contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 Sistema de Compras</p>
+    </footer>
+</body>
+</html>
